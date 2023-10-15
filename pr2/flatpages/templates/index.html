@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Никита Архипов">
+    <meta name="description" content="Портфолио, Никита Архипов">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Разработчик веб приложений Никита Архипов</title>
+	<link rel="shortcut icon" href ="{{ STATIC_URL }}/static/icons/favicon.ico" type="{{ STATIC_URL }}/static/image/x-icon">
+    <link href="{{ STATIC_URL }}/static/css/style.css" rel="stylesheet" type="text/css" id="theme-link">
+
+</head>
+<body>
+    <!--Секция навигации, верхняя строка экрана -->
+    <div class="navigation">
+        <a id="theme_switch"><img src="{{ STATIC_URL }}/static/icons/svgrepo-moon.svg" style="width: 24px; height: 24px" alt="Theme switch"></a>
+        <a href="https://github.com/Nik-gt"><img src="{{ STATIC_URL }}/static/icons/svgrepo-github.svg" style="height: 24px; width:24px" alt="GitHub"></a>
+        <a href="https://t.me/Simon_eon"><img src="{{ STATIC_URL }}/static/icons/svgrepo-telegram.svg" style="height: 24px; width: 24px" alt="TG"></a>
+        <a href="nikitaarkhipov2002@mail.ru"><img src="{{ STATIC_URL }}/static/icons/svgrepo-email.svg" style="height: 24px; width: 24px" alt="Mail"></a>
+        <a href="https://wa.me/8000239455"><img src="{{ STATIC_URL }}/static/icons/svgrepo-whatsapp.svg" style="height: 24px; width: 24px" alt="WhatsApp"></a>
+        <a href="tel:8000239455"><img src="{{ STATIC_URL }}/static/icons/svgrepo-phone.svg" style="height: 24px; width:24px;" alt="Phone call"></a>
+    </div>
+    <!-- фото слева, текст справа -->
+    <div class="flex-container">
+        <!--Аватарка-фото-->
+        <div>
+            <img style="display: block; margin: 0 auto; width: 60%; " src="{{ STATIC_URL }}/static/images/studernt_at_computer(1).jpg" alt="Student at a computer">
+        </div>
+        <!--Текст справа от фото-->
+        <div style="display: flex; flex-direction: column; justify-content: center; line-height: 2">
+            <div><h2>Я Никита Архипов, веб-разработчик</h2></div>
+            <div>Контакты:</div>
+            <div><a href="tel:8000239455">7 (800) 023 94 55</a></div>
+            <div><a href="https://t.me/Simon_eon">t.me/Simon_eon</a></div>
+        </div>
+    </div>
+
+    <h2>Обо мне</h2>
+    <div class="flex-container" style="gap: 10px; ">
+        <div style="text-indent:5%">Я студент МТУСИ, обучаюсь информационным технологиям по программе 09.03.01, Информатика и вычислительная техника.</div>
+        <div>В сферу моей деятельности входит интерфейс: HTML/CSS/Javascript, проектирование веб-приложений с использованием современных подходов.</div>
+        <div>Также я проектировал бэкэнд на Python и Visual C++.</div>
+        <div>Сейчас я хочу набить руку в разработке фронтэнд с использованием фреймворков и библиотек.</div>
+    </div>
+
+
+    <h2>Навыки</h2>
+    <ul class="flex-container1"> 
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaSqript</li>
+        <li>Python</li>
+        <li>Figma</li>
+        <li>Visual&nbsp;C++</li>
+        <li>Photoshop</li>
+    </ul>
+
+    <h2>
+        Проекты
+        <a href="https://github.com/Nik-gt"><img src="{{ STATIC_URL }}/static/images/icon_connect.png" style="width:24px;height:24px" alt="icon connect"> GitHub:</a>
+    </h2>
+	
+	<div class="flex-container scroll">
+    <button type="button" class="arrows" id="left-button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+            <path d="M192 448c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l137.4 137.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448z" />
+        </svg>
+    </button>
+	
+    <div class="flex-container slide" id="content">
+        <div class="flex-container projects">
+            <a href="https://github.com/Nik-gt/SIAOD/blob/main/labs/Lab1.ipynb"><img src="{{ STATIC_URL }}/static/images/algo_sort.jpg" style="background-color: white" alt="алгоритм0"></a>
+            <div>
+                <div style=" font-size: 1.4rem; font-weight: bold "> Сортировка массива:</div>
+                <div style=" font-size: 1.1rem; height: 25px; width: 80px; text-align: center; background-color: mediumpurple; border-radius: 5px; box-shadow: 0 10px 30px #444">Python</div>
+                <div style=" font-size: 1.1rem;">В этих работах представлены основные виды сортировок и примеры их реализации.</div>
+            </div>
+        </div>
+        <br>
+        <div class="flex-container projects">
+            <a href="https://github.com/Nik-gt/SIAOD/blob/main/labs/Lab2.ipynb"><img src="{{ STATIC_URL }}/static/images/algo_search.jpg" style="background-color: white " alt="алгоритм1"></a>
+            <div>
+                <div style=" font-size: 1.4rem; font-weight: bold ">Методы поиска массива:</div>
+                <div style=" font-size: 1.1rem; height: 25px; width: 80px; text-align: center; background-color: mediumpurple; border-radius: 5px; box-shadow: 0 10px 30px #444 ">Python</div>
+                <div style=" font-size: 1.1rem;"> В этих работах представлены основные виды поиска и примеры их реализации.</div>
+            </div>
+        </div>
+        <br>
+        <div class="flex-container projects">
+            <a href="https://github.com/Nik-gt/SIAOD/blob/main/labs/Lab3.ipynb"><img src="{{ STATIC_URL }}/static/images/algo_words.jpg" style="background-color: white " alt="алгоритм2"></a>
+            <div>
+                <div style=" font-size: 1.4rem; font-weight: bold ">Методы поиска подстроки в строке:</div>
+                <div style=" font-size: 1.1rem; height: 25px; width: 80px; text-align: center; background-color: mediumpurple; border-radius: 5px; box-shadow: 0 10px 30px #444 ">Python</div>
+                <div style=" font-size: 1.1rem;">В этих работах представлены виды поиска Кнута-Морриса-Пратта, Бойера-Мура и Алгоритм A* поиска на графе.</div>
+            </div>
+        </div>
+        <br>
+        <div class="flex-container projects">
+            <a href="https://github.com/Nik-gt/SIAOD/blob/main/labs/Lab4.ipynb"><img src="{{ STATIC_URL }}/static/images/algo_stack.jpg" style="background-color: white " alt="алгоритм3"></a>
+            <div>
+                <div style=" font-size: 1.4rem; font-weight: bold ">Стек, дек, очередь:</div>
+                <div style=" font-size: 1.1rem; height: 25px; width: 80px; text-align: center; background-color: mediumpurple; border-radius: 5px; box-shadow: 0 10px 30px #444 ">Python</div>
+                <div style=" font-size: 1.1rem;">В этих работах представлены реализации структуры данных:● Стек (stack)● Дек (deque) и примеры их реализации.</div>
+            </div>
+        </div>
+        <br>
+        <div class="flex-container projects">
+            <a href="https://github.com/Nik-gt/SIAOD/blob/main/labs/Lab5.ipynb"><img src="{{ STATIC_URL }}/static/images/algo_fractal.jpg" style="background-color: white " alt="алгоритм4"></a>
+            <div>
+                <div style=" font-size: 1.4rem; font-weight: bold ">Рекурсия, фракталы:</div>
+                <div style=" font-size: 1.1rem; height: 25px; width: 80px; text-align: center; background-color: mediumpurple; border-radius: 5px; box-shadow: 0 10px 30px #444 ">Python</div>
+                <div style=" font-size: 1.1rem;">В этих работах представлены реализации с применением рекурсивных функций генерации заданного типа фрактала.</div>
+            </div>
+        </div>
+        <br>
+        <div class="flex-container projects">
+            <a href="https://github.com/Nik-gt/SIAOD/blob/main/labs/Lab6.ipynb"><img src="{{ STATIC_URL }}/static/images/algo_shortway.jpg" style="background-color: white " alt="алгоритм5"></a>
+            <div>
+                <div style=" font-size: 1.4rem; font-weight: bold ">Динамические алгоритмы поиска путей:</div>
+                <div style=" font-size: 1.1rem; height: 25px; width: 80px; text-align: center; background-color: mediumpurple; border-radius: 5px; box-shadow: 0 10px 30px #444 ">Python</div>
+                <div style=" font-size: 1.1rem;">В этих работах представлены реализации алгоритмов поиска путей между двумя вершинами ориентированного взвешенного графа.</div>
+            </div>
+        </div>
+    </div>
+    <button type="button" class="arrows" id="right-button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+            <path d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z" />
+        </svg>
+    </button>
+    </div>
+
+    <h2>Хобби:</h2>
+    <div class="flex-container hobby">
+        <div class="games">
+            <img src="{{ STATIC_URL }}/static/images/ghostwire.jpg" style="width: 95%" alt="GhostwireTokyo">
+			<div>
+                <div style=" font-size: 1.4rem; font-weight: bold ">GhostwireTokyo:</div>
+                <div style=" font-size: 1.1rem; height: 25px; width: 100px; text-align: center; background-color: mediumpurple; border-radius: 5px; box-shadow: 0 10px 30px #444 ">Pc & PS5</div>
+                <div style=" font-size: 1.1rem;">Это невообразимо красивые городские улицы современного Токио. Игра имеет "киберпанковый" вид, но при этом сам сеттинг - чистейшая мистика. Вы бродите по улицам современного Токио, а вся чертовщина опирается на японский фольклор.</div>
+            </div>
+        </div>
+        <div class="games">
+            <img src="{{ STATIC_URL }}/static/images/L.A.-Noire.jpg" style="width: 95%" alt="L.A.-Noire">
+			<div>
+                <div style=" font-size: 1.4rem; font-weight: bold ">L.A.Noire:</div>
+                <div style=" font-size: 1.1rem; width: 100%; text-align: center; background-color: mediumpurple; border-radius: 5px; box-shadow: 0 10px 30px #444 ">Pc, PS3, PS4, Xbox 360, Xbox One, Nintendo&nbsp;Switch</div>
+                <div style=" font-size: 1.1rem;">Лос-Анджелес, 1947 год, Коул Фелпс - главный герой, чей мир, вдохновлён реальными полицейскими расследованиями из 40-ых годов. Каждая глава игры, каждое дало - это практический отдельный Нуар фильм. </div>
+            </div>
+        </div>
+        <div class="games">
+            <img src="{{ STATIC_URL }}/static/images/Quantum Break.jpg" style="width: 95% " alt="Quantum Break">
+			<div>
+                <div style=" font-size: 1.4rem; font-weight: bold ">Quantum Break:</div>
+                <div style=" font-size: 1.1rem; height: 25px; width: 155px; text-align: center; background-color: mediumpurple; border-radius: 5px; box-shadow: 0 10px 30px #444 ">Pc & Xbox One</div>
+                <div style=" font-size: 1.1rem;">«Квантовый разлом» -  это экшн-приключенческая видеоигра от создателей Max Payne и Alan Wake в жанре научной фантастики, посвящённой путешествиям во времени и сопуствующими парадоксам, обещает удивить игроков инновационным геймплеем, глубоким и напряженным сюжетом со множеством драматических развязок и реалистичной компьютерной графикой, во всей красе передавшая мастерскую игру широко известных Голливудских актеров.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style=" display: flex; flex-flow: row nowrap; justify-content: space-between;">
+        <p>© <time datetime="2022">2022</time>  Никита Архипов</p>
+    </div>
+    <!-- Изменение темы -->
+    <script src="js/theme.js"></script>
+    <!-- Список со слайдером -->
+    <script src="{{ STATIC_URL }}/static/js/scroll.js"></script>
+</body>
+</html>
