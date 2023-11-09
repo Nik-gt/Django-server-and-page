@@ -1,0 +1,46 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Articles</title>
+    <link rel="stylesheet" href="{% static 'css/lab7.css' %}">
+  </head>
+  <body>
+    <div class="header">
+<img src="https://preview.redd.it/nature-inspired-by-firewatch-wallpapers-v0-zpqz9422s5qa1.png?width=1080&crop=smart&auto=webp&s=ee22f585bf0d1f5bcdaa419989a7dcaa11da1d85">  
+<div class="logo">
+        <img src="https://www.djangoproject.com/m/img/logos/django-logo-negative.png"/>
+        <img width="5%"  src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"/>
+	  </div>
+      <div class="icons-for-parallax">
+	    <img class="icon-for-parallax-first" src="https://img10.reactor.cc/pics/post/Darker-than-Black-Anime-Hei-Anime-%D0%93%D0%B8%D1%84%D0%BA%D0%B8-2202763.gif">
+        <img class="icon-for-parallax-second" src="https://static.wikia.nocookie.net/anime-characters-fight/images/1/10/Cowboy-bebop.png/revision/latest?cb=20200826093432&path-prefix=ru">
+        <img class="icon-for-parallax-third" src="https://i.ytimg.com/vi/UtF74dMoVV8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCyOaJwgjDFEk0nbvAxrenB36pNaQ">
+
+	</div>
+    </div>
+    <div class="articles">
+      {% for post in posts %}
+      <div class="post post-shadow">
+        <h2>
+          <a href="{% url 'article_detail' post.id %}">{{ post.title }}</a>
+        </h2>
+        <button class="fold-button folded">Свернуть</button>
+        <div class="post-info">
+          <div class="post-author">{{ post.author.username }}</div>
+          <div class="post-datetime">{{ post.created_date }}</div>
+        </div>
+        <p class="post-text">{{ post.get_excerpt }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </body>
+  <script src="{% static 'js/helloworld.js' %}"></script>
+  <script src="{% static 'js/fold-post.js' %}"></script>
+  <script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
+  <script src="{% static 'js/highlight-post.js' %}"></script>
+  <script src="{% static 'js/parallax.js' %}"></script>
+</html>

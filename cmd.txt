@@ -1,0 +1,3 @@
+Хочешь стать админом?: python manage.py createsuperuser
+
+Хочешь запустить проект?: python manage.py runserver

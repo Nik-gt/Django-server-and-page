@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles</title>
+</head>
+<body>
+    <div class="header">
+		<img src="https://preview.redd.it/nature-inspired-by-firewatch-wallpapers-v0-zpqz9422s5qa1.png?width=1080&crop=smart&auto=webp&s=ee22f585bf0d1f5bcdaa419989a7dcaa11da1d85">  
+    </div>
+    <div class="articles">
+        {% for post in posts %}
+        <div class="post">
+            <h2 class="post-title">
+                {{ post.title }}
+            </h2>
+            <div class="post-info">
+                <div class="post-author">
+                    {{ post.author.username }}
+                </div>
+                <div class="post-datetime">
+                    {{ post.created_date }}
+                </div>
+            </div>
+            <p class="post-text">
+                {{ post.get_excerpt }}
+            </p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
